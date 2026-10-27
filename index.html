@@ -47,6 +47,13 @@
     .footer { border-top: 1px solid #dadddf; margin-top: 35px; padding-top: 16px; font-size: .81rem; color: #556271; }
     .footer p { margin: 0 0 6px; }
     #status { min-height: 22px; margin: 12px 0 0; color: #8b2d22; font-size: .86rem; }
+    .writing-demo { margin-top: 24px; padding: clamp(18px,4.5vw,30px); background: #fff; border: 1px solid #dfe3e5; border-radius: 20px; }
+    .writing-demo h2 { margin: 0 0 12px; font-size: 1.25rem; }
+    .writing-demo p { margin: 0 0 16px; }
+    .writing-demo label { display: block; margin-bottom: 8px; font-weight: 700; }
+    .writing-demo textarea { display: block; width: 100%; min-height: 160px; padding: 12px; border: 1px solid #aebdc7; border-radius: 10px; background: #fff; color: #232b36; font: inherit; resize: vertical; }
+    .writing-demo textarea:focus-visible { outline: 3px solid #b36c22; outline-offset: 3px; }
+    .writing-demo .writing-note { margin: 10px 0 0; color: #596675; font-size: .85rem; }
     .sr-only { position: absolute; overflow: hidden; width: 1px; height: 1px; padding: 0; margin: -1px; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
     @media(max-width: 460px) {
       .wrap { padding-top: 28px; }
@@ -118,6 +125,15 @@
       <p>しかし、他のアプリケーションやツールを使用できないような監視制度や、音が出ても問題のない別室受験など、公平性を保つための配慮も必要となります。</p>
       </p>
     </aside>
+
+    <section class="writing-demo" aria-labelledby="writing-heading">
+      <h2 id="writing-heading">文字を入力して、解答してみる</h2>
+      <p>パソコンやスマートフォンなどから文字を入力して解答できるようにすることで、書き取りの負担が減る人もいます。</p>
+      <label for="writing-answer">手書きで解答することと、文字を入力して解答することについて、どのように感じますか？</label>
+      <textarea id="writing-answer" rows="6" aria-describedby="writing-note" placeholder="ご自身の経験や、この展示・他の展示の感想など、自由に入力してみてください。"></textarea>
+      <p id="writing-note" class="writing-note">入力を体験するための欄です。入力内容は送信・保存されず、展示者には届きません。</p>
+    </section>
+
     <footer class="footer">
       <!-- 公開前に、使用したVOICEVOX音声ライブラリの正式な名称へ書き換えてください。話者ごとの利用規約も確認してください。 -->
       <p>音声: VOICEVOX:後鬼</p>
@@ -226,3 +242,5 @@
   </script>
 </body>
 </html>
+
+
